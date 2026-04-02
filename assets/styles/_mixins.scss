@@ -1,0 +1,11 @@
+@mixin flex-wrapper($direction: row, $align-items: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+}
+
+@mixin grid-wrapper($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    place-items: center;
+}

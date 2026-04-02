@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, button {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.delivery-descriptrion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 4em;
+  padding: 1em 2em;
+  border-radius: 16px;
+  border: 2px solid #562cb8;
+}
+.delivery-descriptrion h2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  width: 80%;
+  height: 7em;
+  border-radius: 16px;
+}
+.delivery-descriptrion img {
+  width: 20%;
+}
+
+.delivery {
+  margin-bottom: 4em;
+}
+.delivery__price table {
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 25px;
+}
+.delivery__price table td {
+  border: 1px solid #000;
+  padding: 15px;
+}
+
+/*# sourceMappingURL=delivery.css.map */

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin grid-wrapper($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+input,button {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+@mixin flex-wrapper($direction: row, $align-items: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+}
+
+@mixin grid-wrapper($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    place-items: center;
+}
+
+header {
+    @include flex-wrapper();
+    justify-content: center;
+    width: 96%;
+    height: 5rem;
+    margin: auto;
+    margin-bottom: 2em;
+    position: relative;
+    border-bottom: 2px solid #6c6c6c;
+
+    img {
+        width: 3rem;
+        position: absolute;
+        left: 2rem;
+    }
+
+    nav {
+        @include flex-wrapper();
+        gap: 2rem;
+
+        a {
+            color: #000;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.fillings {
+    @include grid-wrapper(4);
+    justify-items: center;
+    width: 90%;
+    gap: 2em;
+    row-gap: 4em;
+    margin: auto;
+    margin-bottom: 4em;
+
+    &__filling {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+        img {
+            height: 10em;
+            margin-bottom: 2em;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 1.3em;
+        }
+    }
+}
