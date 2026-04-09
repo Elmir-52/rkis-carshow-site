@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, button {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.answer {
+  margin-top: 10em;
+}
+.answer h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.answer h3 {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  width: 25em;
+  margin: auto;
+}/*# sourceMappingURL=answer.css.map */

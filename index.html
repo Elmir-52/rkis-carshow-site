@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./assets/styles/style.css">
         <link rel="stylesheet" href="./assets/styles/header.css">
         <link rel="stylesheet" href="./assets/styles/footer.css">
-        <title>Document</title>
+        <title>Home</title>
     </head>
     <body>
         <!-- шапка -->
@@ -183,17 +183,40 @@
 
         <!-- Секция для блока обратной связи с клиентом -->
         <section class="feedback" id="feedback">
-            <div class="content">
-                <div class="form__contact">Заполните анкету и мы позвоним в течении 2 часов</div>
+            <h2>Заполните анкету</h2>
+            <form class="form" action="answer.html">
+                <div class="form__contact">
+                    <input 
+                        class="form__input" 
+                        type="text" 
+                        name="user-name" 
+                        placeholder="Введите имя" 
+                        required
+                        minlength="2"
+                    />
+                    <input 
+                        class="form__input"
+                        type="tel" 
+                        name="tel-number" 
+                        placeholder="Введите номер телефона" 
+                        title="например: 89041041706" 
+                        required
+                        pattern="[0-9]{11}"
+                    />
+                    <input class="form__input" type="email" name="email" placeholder="Введите email" required/>
+                </div>
+
                 <div class="form__download">
-                    <input class="form__input" type="text" placeholder="Введите имя фамилию"/>
-                    <input class="form__input" type="tel" placeholder="Введите номер телефона"/>
-                    <input class="form__input" type="email" placeholder="Введите email"/>
+                    <label for="download">Загрузи фото авто, если на знаешь названия</label>
+                    <input type="file" name="download" id="download"/>
                 </div>
+
                 <div class="form__submit">
-                    <button class="form__button">Отправить</button>
+                    <input type="checkbox" name="personal" id="personal" required>
+                    <label for="personal">я согласен на обработку персональных данных</label>
                 </div>
-            </div>
+                <button class="form__button">Отправить</button>
+            </form>
         </section>
 
         <!-- Секция для блока с картой -->

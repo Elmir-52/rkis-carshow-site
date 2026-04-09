@@ -211,47 +211,71 @@ body {
 
 .feedback {
   width: 100%;
-  height: 70vh;
+  height: 73vh;
   background-image: url("../images/contact-section-background.png");
   background-size: cover;
-  padding: 3em 0;
+  padding: 0.7em 0;
 }
-.feedback .form__contact {
+.feedback h2 {
   font-size: 2.5em;
   font-weight: 300;
-  margin-bottom: 1em;
   color: #fff;
   text-align: center;
+  margin-bottom: 0.6em;
 }
-.feedback .form__download {
+.feedback .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.8em;
-  margin-bottom: 2em;
+  width: 100%;
 }
-.feedback .form__download .form__input {
-  width: 55%;
+.feedback .form__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.2em;
+}
+.feedback .form__input {
+  width: 40em;
   height: 2.5em;
   padding: 0 1em;
   font-size: 1.2em;
   border: none;
   border-radius: 8px;
+  margin-bottom: 0.2em;
 }
-.feedback .form__download .form__input:focus {
+.feedback .form__input:focus {
   outline: none;
+}
+.feedback .form__download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  color: #fff;
+  width: 45em;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+.feedback .form__download input {
+  display: block;
+  font-size: 1.2em;
+  width: 16em;
 }
 .feedback .form__submit {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 2.8em;
+  gap: 1em;
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
-.feedback .form__submit .form__button {
-  width: 16%;
-  height: 100%;
+.feedback .form__button {
+  padding: 0.5em 5em;
   border: none;
   border-radius: 8px;
   font-size: 1.2em;
@@ -275,6 +299,4 @@ body {
   padding: 0.3em 0;
   background: #000000;
   border-radius: 10px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
