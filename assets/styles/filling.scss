@@ -36,33 +36,6 @@ body {
     place-items: center;
 }
 
-header {
-    @include flex-wrapper();
-    justify-content: center;
-    width: 96%;
-    height: 5rem;
-    margin: auto;
-    margin-bottom: 2em;
-    position: relative;
-    border-bottom: 2px solid #6c6c6c;
-
-    img {
-        width: 3rem;
-        position: absolute;
-        left: 2rem;
-    }
-
-    nav {
-        @include flex-wrapper();
-        gap: 2rem;
-
-        a {
-            color: #000;
-            font-size: 1.3rem;
-        }
-    }
-}
-
 h2 {
     text-align: center;
     font-size: 2em;
@@ -72,10 +45,11 @@ h2 {
 }
 
 .fillings {
-    @include grid-wrapper(4);
-    justify-items: center;
+    @include flex-wrapper;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
     width: 90%;
-    gap: 2em;
     row-gap: 4em;
     margin: auto;
     margin-bottom: 4em;
@@ -84,7 +58,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 70%;
+        width: 250px;
 
         img {
             height: 10em;

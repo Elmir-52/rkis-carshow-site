@@ -13,11 +13,12 @@ header {
     margin-bottom: 2em;
     position: relative;
     border-bottom: 2px solid #6c6c6c;
+    font-size: 16px;
 
     & > a {
-        width: 3rem;
+        width: 3em;
         position: absolute;
-        left: 2rem;
+        left: 2em;
 
         img {
             width: 100%;
@@ -26,11 +27,32 @@ header {
 
     ul {
         @include flex-wrapper();
-        gap: 2rem;
+        gap: 2em;
 
         a {
             color: #000;
-            font-size: 1.3rem;
+            font-size: 1.3em;
         }
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        justify-content: flex-end;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        justify-content: flex-end;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        justify-content: flex-end;
+        font-size: 8px;
     }
 }

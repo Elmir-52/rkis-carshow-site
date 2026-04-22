@@ -38,6 +38,7 @@ body {
   width: 80%;
   height: 7em;
   border-radius: 16px;
+  font-size: 1.6em;
 }
 .delivery-descriptrion img {
   width: 20%;
@@ -49,9 +50,26 @@ body {
 .delivery__price table {
   border-collapse: collapse;
   margin: auto;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 .delivery__price table td {
   border: 1px solid #000;
   padding: 15px;
+}
+
+@media (max-width: 950px) {
+  .delivery-descriptrion {
+    font-size: 12px;
+    width: 85%;
+  }
+}
+@media (max-width: 650px) {
+  .delivery-descriptrion {
+    font-size: 8px;
+  }
+  .delivery {
+    width: 98%;
+    margin: 0 auto;
+    font-size: 8px;
+  }
 }/*# sourceMappingURL=delivery.css.map */
