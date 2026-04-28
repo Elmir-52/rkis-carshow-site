@@ -10,18 +10,7 @@
     </head>
     <body>
         <!-- шапка -->
-        <header>
-            <a href="./index.html"><img src="https://cdn-icons-png.flaticon.com/512/48/48688.png" alt="лого"></a>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Главная</a></li>
-                    <li><a href="./cars.html">Каталог</a></li>
-                    <li><a href="./delivery.html">Заказать</a></li>
-                    <li><a href="./filling.html">Запчасти</a></li>
-                    <li><a href="./index.html#feedback">Обратная связь</a></li>
-                </ul>
-            </nav>
-        </header>
+        <?php include './inc/header.php'; ?>
 
         <!-- секция для рекламного банера -->
          <section class="banner">
@@ -184,7 +173,7 @@
         <!-- Секция для блока обратной связи с клиентом -->
         <section class="feedback" id="feedback">
             <h2>Заполните анкету</h2>
-            <form class="form" action="answer.html">
+            <form class="form" action="answer.php">
                 <div class="form__contact">
                     <input 
                         class="form__input" 
@@ -229,34 +218,6 @@
         </section>
 
         <!-- Подвал сайта с контактной информацией -->
-        <footer class="footer">
-            <div class="content">
-                <div class="footer__main">
-                    <div class="footer__info">
-                        <p>Автодиллер <br> "Гепардик"</p>
-                        <p>ИП Караев Э.Р.</p>
-                        <p>Все права защищены</p>
-                    </div>
-                    <div class="footer__social">
-                        <p>Мы в социальных сетях</p>
-                        <ul>
-                            <li><img src="./assets/images/vk-logo.png" alt=""> <a href="https://vk.com">Вконтакте</a></li>
-                            <li><img src="./assets/images/instagram-logo.webp" alt=""> <a href="https://instagram.com">Инстаграмм</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__menu">
-                        <nav>
-                            <ul>
-                                <li><a href="./index.html">Главная</a></li>
-                                <li><a href="./cars.html">Каталог</a></li>
-                                <li><a href="./delivery.html">Заказать</a></li>
-                                <li><a href="./filling.html">Запчасти</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="footer__add"><a href="https://bmw.com">БМВ</a> <a href="https://toyota.com">Тойота</a> <a href="https://vw.com">Фольксваген</a> При создании учебного сайта использовались изображения с портала example.com Источники вдохновения и текстового содержимого: gepardik.ru и www.gepardik.com.</div>
-            </div>
-        </footer>
+        <?php include './inc/footer.php'; ?>
     </body>
 </html>

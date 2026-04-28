@@ -1,5 +1,0 @@
-cd assets\styles
-sass --watch style.scss style.css
-sass --watch delivery.scss delivery.css
-sass --watch footer.scss footer.css
-sass --watch answer.scss answer.css

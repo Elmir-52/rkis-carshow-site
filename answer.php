@@ -10,22 +10,7 @@
   </head>
   <body>
     <!-- шапка -->
-    <header>
-      <a href="./index.html"
-        ><img
-          src="https://cdn-icons-png.flaticon.com/512/48/48688.png"
-          alt="лого"
-      /></a>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Главная</a></li>
-          <li><a href="./cars.html">Каталог</a></li>
-          <li><a href="./delivery.html">Заказать</a></li>
-          <li><a href="./filling.html">Запчасти</a></li>
-          <li><a href="./index.html#feedback">Обратная связь</a></li>
-        </ul>
-      </nav>
-    </header>
+    <?php include './inc/header.php'; ?>
 
     <section class="answer">
         <h2>Спасибо за обращение</h2>
