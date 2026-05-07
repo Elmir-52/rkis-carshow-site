@@ -9,39 +9,36 @@
     <title>Filling</title>
   </head>
   <body>
-    <!-- шапка -->
-    <?php include './inc/header.php'; ?>  
+    <?php
+      include './inc/header.php';
+
+      include './connect.php';
+    ?>  
 
     <!-- Секция для блока с начинками -->
     <h2>У нас вы можете купить запчасти для авто</h2>
+
     <section class="fillings">
-      <!-- блок для вывода информации об одной начинке -->
-      <figure class="fillings__filling">
-        <img src="./assets/images/свеча-зажигания.png" />
-        <figcaption>Свечи зажигания</figcaption>
-      </figure>
-      <figure class="fillings__filling">
-        <img src="./assets/images/карбюратор.jpg" />
-        <figcaption>Карбюратор</figcaption>
-      </figure>
-      <figure class="fillings__filling">
-        <img src="./assets/images/радиатор.jpg" />
-        <figcaption>Радиатор</figcaption>
-      </figure>
-      <figure class="fillings__filling">
-        <img src="./assets/images/аккумулятор.jpg" />
-        <figcaption>Аккумулятор</figcaption>
-      </figure>
-      <figure class="fillings__filling">
-        <img src="./assets/images/воздушные-фильры.webp" />
-        <figcaption>Воздушный фильтр</figcaption>
-      </figure>
-      <figure class="fillings__filling">
-        <img
-          src="https://static.vodnik.ru/uploads/images/nomenclature/max/porshen-s-shatunom-yamaha-f115-0-25_655069.jpg"
-        />
-        <figcaption>Поршень</figcaption>
-      </figure>
+      <?php
+        $data = "";
+        
+        $sql = "SELECT * FROM `fillings`";
+        
+        $result = $mysqli->query($sql);
+        
+        while($row = $result->fetch_assoc()){
+        
+          $data .= sprintf('
+          <figure class="fillings__filling">
+            <img src="%s" alt="%s"/>
+            <figcaption>%s</figcaption>
+          </figure>
+          ', $row['path'], $row['name'], $row['name']);
+          
+        }
+        
+        echo $data;
+      ?>
     </section>
   </body>
 </html>

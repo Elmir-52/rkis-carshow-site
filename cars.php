@@ -9,225 +9,50 @@
     <title>Cars</title>
   </head>
   <body>
-    <!-- шапка -->
-    <?php include './inc/header.php'; ?>
+    <?php 
+      include './inc/header.php';
+
+      include './connect.php';
+    ?>
 
     <section class="cars">
       <div class="content">
-        <!-- блок для вывода информации об одном торте -->
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/bmw-x5.webp"
-              alt=""
-            />
-          </div>
+        <?php 
+          $data = "";
+          
+          $sql = "SELECT * FROM `cars`";
+          
+          $result = $mysqli->query($sql);
 
-          <div class="descript">
-            <div class="descript__text">
-              BMW X5 (G05) — четвёртое поколение знаменитого среднеразмерного
-              кроссовера BMW X5. Выпуск модели был начат в ноябре 2018 года в
-              Европе. Мощность двигателя: 600 л.с. Разгон до 100 км/ч: 3,9сек.
-            </div>
+          while($row = $result->fetch_assoc()){
+          
+            $data .= sprintf('
+              <div class="car">
+                <div class="car__image">
+                  <img
+                    class="descript__image"
+                    src="%s"
+                    alt="%s"
+                  />
+                </div>
 
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">15 000 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
+                <div class="descript">
+                  <div class="descript__text">
+                    %s — %s
+                  </div>
 
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/camry.webp"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              Стильный дизайн с динамичными линиями кузова, эффектная форма
-              переднего бампера, решетка радиатора с боковой серебристой
-              окантовкой, новые цвета экстерьера и уникальный двухцветный окрас
-              кузова для специальной серии Toyota Gazoo Racing - все это
-              подчеркивает выразительный облик бизнес-седана. Мощность
-              двигателя: 240 л.с. Разгон до 100 км/ч: 7,7сек.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">2 900 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/skoda.webp"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              Skoda Octavia — это популярный чешский автомобиль (седан/лифтбек
-              или универсал) среднего класса (C-segment), построенный на
-              модульной платформе MQB. Известен своим просторным салоном,
-              огромным багажником, высоким уровнем безопасности (5 звезд Euro
-              NCAP) и широкой линейкой турбодвигателей. Мощность двигателя: 150
-              л.с. Разгон до 100 км/ч: 9,0сек.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">2 100 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/tiguan.png"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              Volkswagen Tiguan — это компактный кроссовер, который балансирует
-              между городской практичностью и возможностями для лёгкого
-              бездорожья. Понимание его технических характеристик помогает
-              оценить, насколько этот автомобиль соответствует вашим ежедневным
-              задачам и стилю вождения. Мощность двигателя: 220 л.с. Разгон до
-              100 км/ч: 6,8сек.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">4 200 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/bmw-i5.png"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              BMW i5 — электро седан бизнес-класса (G60), сочетающий спортивную
-              динамику и технологичность. Модель доступна в версиях eDrive40
-              (задний привод, 340 л.с.) и M60 xDrive (полный привод, 601 л.с.).
-              Запас хода достигает до 582-630 км (WLTP), а зарядка с 10% до 80%
-              занимает около 30 минут. Разгон до 100 км/ч: 3,8сек.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">9 000 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/kia-rio.webp"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              Kia Rio — популярный корейский субкомпактный автомобиль (B-класс),
-              известный надежностью, современным дизайном и адаптацией к
-              российским условиям (клиренс 160–195 мм). Оснащается бензиновыми
-              двигателями 1.4 л (100 л.с.) или 1.6 л (123 л.с.) с 6-МКПП/АКПП.
-              Предлагается в кузовах седан и кросс-хэтчбек (Rio X), отличается
-              экономичностью и вместительным багажником. Разгон до 100 км/ч:
-              10,5сек.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">1 900 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/land-cruiser.png"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              Toyota Land Cruiser — легендарная серия рамных внедорожников
-              повышенной проходимости, сочетающая надежность, высокий комфорт и
-              премиальные технологии. Современный Land Cruiser 300 оснащается
-              мощными V6 турбодвигателями (бензин 415 л.с. или дизель),
-              10-ступенчатой АКПП, системой полного привода и передовой
-              электроникой, обеспечивая отличную проходимость, безопасность и
-              статус. Разгон до 100 км/ч: 6,8сек.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">12 000 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car">
-          <div class="car__image">
-            <img
-              class="descript__image"
-              src="./assets/images/bmw-i8.png"
-              alt=""
-            />
-          </div>
-
-          <div class="descript">
-            <div class="descript__text">
-              BMW i8 — революционный спортивный плагин-гибрид с футуристичным
-              дизайном, дверями «крыло чайки» и карбоновым кузовом. Он сочетает
-              1,5-литровый бензиновый турбомотор и электродвигатель, выдавая
-              суммарную мощность 362–374 л.с., разгоняется до 100 км/ч за 4,4
-              секунды и расходует всего около 2 л/100 км топлива.
-            </div>
-
-            <div class="descript__buy-wrap">
-              <div class="descripr__filling">Цена:</div>
-              <div class="descript__price">2 100 000&#8381;</div>
-              <a href="./index.html#feedback">Заказать</a>
-            </div>
-          </div>
-        </div>
-        <!-- конец блока -->
+                  <div class="descript__buy-wrap">
+                    <div class="descripr__filling">Цена:</div>
+                    <div class="descript__price">15 000 000&#8381;</div>
+                    <a href="./index.php#feedback">Заказать</a>
+                  </div>
+                </div>
+              </div>
+              ', $row['path'], $row['title'], $row['title'], $row['information']);
+          }
+          
+          echo $data;
+        ?>
       </div>
     </section>
 
