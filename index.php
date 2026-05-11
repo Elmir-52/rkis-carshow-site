@@ -10,9 +10,9 @@
     </head>
     <body>
         <?php 
-            include './inc/header.php';
+            include 'inc/header.php';
 
-            include './connect.php';
+            include './function/connect.php';
 
             $sql = "SELECT * FROM `index_page`";
 

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles/delivery.css" />
-    <link rel="stylesheet" href="./assets/styles/header.css" />
-    <link rel="stylesheet" href="./assets/styles/footer.css" />
+    <link rel="stylesheet" href="../assets/styles/delivery.css" />
+    <link rel="stylesheet" href="../assets/styles/header.css" />
+    <link rel="stylesheet" href="../assets/styles/footer.css" />
     <title>Delivery</title>
   </head>
   <body>
     <!-- шапка -->
-    <?php include './inc/header.php'; ?>
+    <?php include '../inc/header.php'; ?>
 
     <!-- Секция для блока условий доставки -->
     <section class="delivery-descriptrion">
@@ -18,7 +18,7 @@
         Доставляем автомобили по всей Москве в течении 8 часов. Оформим
         документы прямо у вашего дома.
       </h2>
-      <img src="./assets/images/карта москвы.svg" />
+      <img src="../assets/images/карта москвы.svg" />
     </section>
 
     <section class="delivery">
